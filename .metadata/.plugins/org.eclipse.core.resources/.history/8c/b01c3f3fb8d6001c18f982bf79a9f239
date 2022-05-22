@@ -1,0 +1,27 @@
+package com.booking.repository.entities;
+
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+
+import lombok.Data;
+
+@Data
+@Document("theatrescreens")
+public class TheatreScreens {
+	
+	@Id
+	private int id;
+	
+	@DocumentReference(lazy = true)
+	private List<Theatres> screenList;  
+	
+	private String screenName;
+	
+	private String city
+
+	//seat plan
+	
+}

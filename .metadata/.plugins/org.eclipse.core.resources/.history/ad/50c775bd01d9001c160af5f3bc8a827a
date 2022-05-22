@@ -1,0 +1,28 @@
+package com.booking.service.impl;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.booking.dto.MovieShowsDTO;
+import com.booking.repository.MovieShowsRepository;
+import com.booking.repository.entities.MovieShows;
+import com.booking.service.BrowseMoviesService;
+import com.booking.service.MovieShowsService;
+
+@Service
+public class BrowseMoviesServiceImpl implements BrowseMoviesService{
+	
+	@Autowired
+	private MovieShowsRepository repo;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	public List<> getAllShows() {
+		return repo.findAll();
+	}
+
+}

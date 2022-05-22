@@ -1,0 +1,6 @@
+package com.booking.repository.entities;
+
+@Entity
+public class TheatresEntity {
+
+}

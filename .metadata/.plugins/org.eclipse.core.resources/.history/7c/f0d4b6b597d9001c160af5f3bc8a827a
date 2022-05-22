@@ -1,0 +1,33 @@
+package com.booking.repository.entities;
+
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+
+import lombok.Data;
+
+@Data
+@Document("theatres")
+public class Theatres {
+	
+	@Id
+	private int id;
+	
+	private String name;
+	
+	private String city;
+	
+	private String status;
+	
+	private String place;
+	
+	private String Country;
+	
+	@DocumentReference
+	private List<TheatreScreens> screenList;  
+	
+	//Geo lat long 
+
+}

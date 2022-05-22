@@ -1,0 +1,14 @@
+package com.booking.service;
+
+import com.booking.dto.MovieShowsDTO;
+
+public interface MovieShowsService {
+	
+	public void createShow(MovieShowsDTO dto) ;
+	
+	public void updateShow(MovieShowsDTO dto) ;
+	
+    public void deleteShow(MovieShowsDTO dto) ;
+
+	public void loadMasterData();
+}

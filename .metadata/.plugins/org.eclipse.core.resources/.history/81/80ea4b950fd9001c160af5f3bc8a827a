@@ -1,0 +1,15 @@
+package com.booking.service.impl;
+
+import com.booking.service.MovieService;
+
+public class MovieServiceImpl implements MovieService{
+	
+	@Autowired
+	MovieRepository repo;
+	
+	public void loadMasterData() {
+		
+		
+	}
+
+}

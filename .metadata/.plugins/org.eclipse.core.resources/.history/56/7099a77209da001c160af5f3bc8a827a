@@ -1,0 +1,4 @@
+spring.application.name=CloudGatewayMS
+spring.config.import=configserver:http://localhost:1111
+
+spring.cloud.gateway.routes[1].predicates[1].name=method

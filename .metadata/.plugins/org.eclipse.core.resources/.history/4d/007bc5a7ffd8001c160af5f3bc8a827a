@@ -1,0 +1,4 @@
+
+spring.cloud.config.import-check.enabled=false
+spring.data.mongodb.uri=mongodb+localhost://<username>:<pwd>@<cluster>.mongodb.net/mygrocerylist
+spring.data.mongodb.database=TicketBooking

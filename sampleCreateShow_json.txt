@@ -1,0 +1,11 @@
+{
+        "showTime": "06:00",
+        "showDate": "27-May-2022",
+        "showStatus": "OPEN",
+        "movie": {
+            "id": "6289ea803eee8d1032fb753b"
+        },
+        "theatreScreen": {
+            "id": "6289ea803eee8d1032fb7542"
+        }
+    }

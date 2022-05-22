@@ -1,0 +1,24 @@
+package com.booking.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.booking.repository.TheatreScreensRepository;
+import com.booking.repository.entities.TheatreScreens;
+import com.booking.service.TheatreScreenService;
+
+public class TheatreScreenServiceImpl implements TheatreScreenService {
+	
+	@Autowired
+	private TheatreScreensRepository repo;
+
+	@Override
+	public void loadMasterData() {
+		
+		List<> screensList=new ArrayList<TheatreScreens>();
+		TheatreScreens screen=  TheatreScreens
+				.builder()
+				.screenName(null)
+		
+	}
+
+}

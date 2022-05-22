@@ -1,0 +1,33 @@
+package com.booking.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.booking.dto.MovieShowsDTO;
+import com.booking.service.MovieShowsService;
+
+@RestController
+public class TheatreShowsController {
+	
+	@Autowired
+	private MovieShowsService service;
+	
+	
+	@PostMapping("/theatreShows/createShow")
+	public void createShow(@RequestBody MovieShowsDTO dto) {
+		service.createShow(dto);
+	}
+	
+	@PostMapping("/theatreShows/updateShow")
+	public void updateeShow(@RequestBody MovieShowsDTO dto) {
+		service.createShow(dto);
+	}
+	
+	@DeleteMapping("/theatreShows/deleteShow")
+	public void deleteShow(@RequestBody MovieShowsDTO dto) {
+		service.createShow(dto);
+	}
+
+}

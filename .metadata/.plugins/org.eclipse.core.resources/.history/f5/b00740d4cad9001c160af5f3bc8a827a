@@ -1,0 +1,3 @@
+
+spring.application.name=BrowseMoviesMS
+spring.config.import=configserver:http://localhost:1111

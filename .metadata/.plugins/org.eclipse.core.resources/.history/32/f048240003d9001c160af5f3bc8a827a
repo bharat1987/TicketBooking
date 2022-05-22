@@ -1,0 +1,25 @@
+package com.booking.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.booking.repository.entities.MovieShows;
+import com.booking.service.BrowseMoviesService;
+
+@RestController
+@Slf4j
+public class BrowseMoviesController {
+	
+	@Autowired
+	private BrowseMoviesService service;
+	
+	
+	@GetMapping("/browseShows/getAllShows")
+	public List<MovieShows> getAllShows() {
+		return service.getAllShows();
+	}
+
+}

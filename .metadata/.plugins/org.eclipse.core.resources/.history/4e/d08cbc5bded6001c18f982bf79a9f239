@@ -1,0 +1,15 @@
+package com.booking.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.booking.service.MovieShowsService;
+
+@Controller
+public class TheatreShowsController {
+	
+	@Autowired
+	private MovieShowsService service;
+	
+
+}

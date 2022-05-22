@@ -1,0 +1,13 @@
+package com.booking.service.impl;
+
+import com.booking.service.TheatreScreen;
+
+public class TheatreScreenServiceImpl implements TheatreScreen {
+
+	@Override
+	public void loadMasterData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

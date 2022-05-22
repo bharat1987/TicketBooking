@@ -1,0 +1,9 @@
+package com.booking.service.impl;
+
+import com.booking.service.MovieService;
+
+public class MovieServiceImpl implements MovieService{
+	
+	public void loadMasterData() {
+
+}

@@ -1,0 +1,6 @@
+server.port=1111
+spring.application.name=TicketBookingConfigServer
+spring.cloud.config.server.git.uri=https://github.com/bharat1987/TicketBooking_Config.git
+spring.security.user.name=configserver
+spring.security.user.password=client1234
+spring.cloud.config.fail-fast=true

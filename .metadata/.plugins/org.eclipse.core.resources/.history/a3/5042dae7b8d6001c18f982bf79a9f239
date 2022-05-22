@@ -1,0 +1,21 @@
+package com.booking.repository.entities;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+
+@Data
+@Document("movieshows")
+public class Movies {
+	
+	@Id
+	private int id;
+	
+	private String movieName;
+	
+	@DocumentReference
+	private List<MovieShows> showList;
+
+
+}

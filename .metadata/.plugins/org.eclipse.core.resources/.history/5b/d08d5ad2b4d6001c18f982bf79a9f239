@@ -1,0 +1,13 @@
+package com.booking.repository.entities;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class TheatresEntity {
+	
+	@Id
+	private int id;
+	
+
+}

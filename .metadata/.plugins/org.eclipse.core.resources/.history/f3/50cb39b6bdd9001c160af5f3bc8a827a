@@ -1,0 +1,5 @@
+spring.application.name=MaintainShowsMS
+spring.cloud.config.import-check.enabled=false
+spring.data.mongodb.uri=mongodb://localhost:27017/
+spring.data.mongodb.database=TicketBooking
+spring.config.import=configserver:http://localhost:1111

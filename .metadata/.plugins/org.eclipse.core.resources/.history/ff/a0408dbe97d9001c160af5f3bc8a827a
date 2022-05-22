@@ -1,0 +1,19 @@
+package com.booking.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.booking.repository.TheatresRepository;
+import com.booking.service.TheatreService;
+
+public class TheatreServiceImpl implements TheatreService{
+
+	@Autowired
+	private TheatresRepository repo;
+	
+	@Override
+	public void loadMasterData() {
+		
+		
+	}
+
+}

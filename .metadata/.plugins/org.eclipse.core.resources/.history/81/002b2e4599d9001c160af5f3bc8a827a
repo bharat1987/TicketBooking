@@ -1,0 +1,17 @@
+package com.booking.service.impl;
+
+import com.booking.repository.TheatreScreensRepository;
+import com.booking.service.TheatreScreen;
+
+public class TheatreScreenServiceImpl implements TheatreScreen {
+	
+	@Autowired
+	private TheatreScreensRepository repo;
+
+	@Override
+	public void loadMasterData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

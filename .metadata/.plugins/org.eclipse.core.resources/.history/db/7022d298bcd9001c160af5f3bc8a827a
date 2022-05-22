@@ -1,0 +1,6 @@
+spring.application.name=BrowseMoviesMS
+spring.cloud.config.import-check.enabled=false
+spring.data.mongodb.uri=mongodb://localhost:27017/
+spring.data.mongodb.database=TicketBooking
+server.port=8081
+spring.config.import=optional:configserver:http://root:s3cr3t@localhost:8888

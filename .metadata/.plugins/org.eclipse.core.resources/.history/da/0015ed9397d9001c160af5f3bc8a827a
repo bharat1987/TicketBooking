@@ -1,0 +1,7 @@
+package com.booking.service.impl;
+
+import com.booking.service.TheatreService;
+
+public class TheatreServiceImpl implements TheatreService{
+
+}

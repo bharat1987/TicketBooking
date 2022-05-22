@@ -1,0 +1,8 @@
+package com.booking.service.impl;
+
+import com.booking.service.MovieShowsService;
+
+@Service
+public class MovieShowsServiceImpl implements MovieShowsService{
+
+}

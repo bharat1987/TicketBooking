@@ -1,0 +1,11 @@
+package com.booking.repository.entities;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+
+@Data
+@Document("theatrescreens")
+public class TheatreScreens {
+
+}

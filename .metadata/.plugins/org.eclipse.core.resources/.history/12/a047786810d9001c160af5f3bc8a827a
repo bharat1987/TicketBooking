@@ -1,0 +1,27 @@
+package com.booking.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.booking.repository.MoviesRepository;
+import com.booking.repository.entities.Movies;
+import com.booking.service.MovieService;
+
+public class MovieServiceImpl implements MovieService{
+	
+	@Autowired
+	MoviesRepository repo;
+	
+	public void loadMasterData() {
+		
+		Movies movie=Movies.builder()
+				.movieName("F3").build();
+		Movies movie2=Movies.builder()
+				.movieName("Top Gun").build();
+		Movies movie3=Movies.builder()
+				.movieName("RRR").build();
+		repo.save(movie);
+		
+		
+	}
+
+}

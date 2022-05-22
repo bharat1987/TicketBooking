@@ -1,0 +1,97 @@
+package com.booking.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.booking.repository.TheatreScreensRepository;
+import com.booking.repository.TheatresRepository;
+import com.booking.repository.entities.TheatreScreens;
+import com.booking.repository.entities.Theatres;
+import com.booking.service.TheatreService;
+
+public class TheatreServiceImpl implements TheatreService{
+
+	@Autowired
+	private TheatresRepository repo;
+	
+	@Autowired
+	private TheatreScreensRepository screenRepo;
+	
+	@Override
+	public void loadMasterData() {
+		
+		List<Theatres> theatreList=new ArrayList<Theatres>();
+		List<TheatreScreens> screensList=new ArrayList<TheatreScreens>();
+		
+		Theatres theatreEntity=Theatres.builder().name("PVR")
+				.city("Hyderabad")
+				.status("Active")
+				.place("Punjagutta")
+				.country("India")
+				.build();
+		
+		TheatreScreens screen=  TheatreScreens
+				.builder()
+				.screenName("Atom1")
+				.theatre(theatreEntity)
+				.build();
+		screensList.add(screen);
+		
+		TheatreScreens screen2=  TheatreScreens
+				.builder()
+				.screenName("Atom2")
+				.theatre(theatreEntity)
+				.build();
+		screensList.add(screen2);
+		
+		
+		theatreList.add(theatreEntity);
+		
+		
+		Theatres theatreEntity2=Theatres.builder().name("Mallikarjuna")
+				.city("Hyderabad")
+				.status("Active")
+				.place("Nizampet")
+				.country("India")
+				.build();
+		
+		TheatreScreens screen3=  TheatreScreens
+				.builder()
+				.screenName("Screen1")
+				.theatre(theatreEntity2)
+				.build();
+		screensList.add(screen3);
+		
+		
+		theatreList.add(theatreEntity2);
+		
+		Theatres theatreEntity3=Theatres.builder().name("Inox")
+				.city("Bangalore")
+				.status("Active")
+				.place("Majestic")
+				.country("India")
+				.build();
+		theatreList.add(theatreEntity3);
+		
+		TheatreScreens screen4=  TheatreScreens
+				.builder()
+				.screenName("A1")
+				.theatre(theatreEntity3)
+				.build();
+		screensList.add(screen4);
+		
+		TheatreScreens screen5=  TheatreScreens
+				.builder()
+				.screenName("A2")
+				.theatre(theatreEntity3)
+				.build();
+		screensList.add(screen5);
+		repo.saveAll(theatreList);
+		screenRepo.saveAll(screensList);
+		
+		
+	}
+
+}

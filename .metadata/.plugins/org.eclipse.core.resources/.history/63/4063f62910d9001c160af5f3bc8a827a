@@ -1,0 +1,20 @@
+package com.booking.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.booking.repository.MoviesRepository;
+import com.booking.service.MovieService;
+
+public class MovieServiceImpl implements MovieService{
+	
+	@Autowired
+	MoviesRepository repo;
+	
+	public void loadMasterData() {
+		
+		repo.save(repo);
+		
+		
+	}
+
+}

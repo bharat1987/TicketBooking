@@ -1,0 +1,26 @@
+package com.booking.dto;
+
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+
+import lombok.Data;
+
+@Data
+public class TheatreScreens {
+	
+	private int id;
+	
+	@DocumentReference(lazy = true)
+	private TheatresDTO theatre;  
+	
+	private String screenName;
+	
+	@DocumentReference(lazy=true)
+	private List<MovieShows> showList;
+
+	//seat plan
+	
+}

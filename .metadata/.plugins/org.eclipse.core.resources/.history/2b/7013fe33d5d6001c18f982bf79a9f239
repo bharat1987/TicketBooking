@@ -1,0 +1,13 @@
+package com.booking.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.booking.service.MovieShowsService;
+
+@Service
+public class MovieShowsServiceImpl implements MovieShowsService{
+	
+	@Autowired
+	private MovieShowsRepository repo;
+
+}

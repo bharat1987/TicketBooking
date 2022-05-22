@@ -1,0 +1,12 @@
+package com.booking.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class TheatreShowsController {
+	
+	@Autowired
+	private MovieShowsService service;
+	
+
+}

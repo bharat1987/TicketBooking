@@ -1,0 +1,34 @@
+package com.booking.service.impl;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.booking.dto.MovieShowsDTO;
+import com.booking.repository.MovieShowsRepository;
+import com.booking.service.MovieShowsService;
+
+@Service
+public class MovieShowsServiceImpl implements MovieShowsService{
+	
+	@Autowired
+	private MovieShowsRepository repo;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	public void createShow(MovieShowsDTO dto) {
+		mapper.map(dto,);		
+		repo.save(movieShows);
+		
+	}
+	
+	public void updateShow(MovieShowsDTO dto) {
+		
+	}
+	
+    public void deleteShow(MovieShowsDTO dto) {
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.booking.repository.entities;
+
+@Document
+public class TheatresEntity {
+	
+	@Id
+	private int id;
+	
+
+}

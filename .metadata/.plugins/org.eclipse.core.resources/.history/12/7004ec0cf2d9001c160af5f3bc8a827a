@@ -1,0 +1,69 @@
+package com.booking.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.booking.dto.TheatreScreensDTO;
+import com.booking.repository.entities.MovieShows;
+import com.booking.service.BrowseMoviesService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class CreateShowController {
+	
+	@Autowired
+	RestTemplate template;
+	
+	@GetMapping("/getCreateShow")
+	public ModelAndView getAllShows(Model model) {
+		log.info("CreateShowController - Get Span");
+		ResponseEntity<List<TheatreScreensDTO>> screensListResponse=template
+				.exchange("http://BROWSEMOVIESMS/getAllScreens", HttpMethod.GET,null,
+						new ParameterizedTypeReference<List<TheatreScreensDTO>>() {});
+		if(screensListResponse.getStatusCode() == HttpStatus.OK) {
+			List<TheatreScreensDTO> screenlist = screensListResponse.getBody();
+	        log.info("Available screens: "+screenlist.size());
+	        model.addAttribute("screenList",screenList)
+	    } else {
+	        log.error("No Screens");
+	        return new ModelAndView("error");
+	    }
+		
+		ResponseEntity<List<TheatreScreensDTO>> screensListResponse=template
+				.exchange("http://BROWSEMOVIESMS/getAllMovies", HttpMethod.GET,null,
+						new ParameterizedTypeReference<List<TheatreScreensDTO>>() {});
+		if(screensListResponse.getStatusCode() == HttpStatus.OK) {
+			List<TheatreScreensDTO> screenlist = screensListResponse.getBody();
+	        log.info("Available screens: "+screenlist.size());
+	        model.addAttribute("screenList",screenList)
+	    } else {
+	        log.error("No Screens");
+	        return new ModelAndView("error");
+	    }
+		return new ModelAndView("createShow");
+	}
+	
+	@PostMapping("/createShow")
+	public ModelAndView createShows(Model model,
+			@ModelAttribute("MovieShowModel")MovieShowModel moviewShowModel  ) {
+		log.info("CreateShowController - Post Span");
+		return service.getAllShows();
+	}
+
+}

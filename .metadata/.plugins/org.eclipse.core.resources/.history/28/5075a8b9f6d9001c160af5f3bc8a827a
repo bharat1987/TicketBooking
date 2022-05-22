@@ -1,0 +1,11 @@
+package com.booking.model;
+
+@Data
+public class ShowForm {
+	
+	private String movieId;
+	private String theatreScreenId;
+	private String showTime;
+	private String showDate
+
+}
