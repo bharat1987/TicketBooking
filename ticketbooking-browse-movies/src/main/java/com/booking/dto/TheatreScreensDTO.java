@@ -1,6 +1,5 @@
 package com.booking.dto;
 
-import java.util.List;
 
 import lombok.Data;
 

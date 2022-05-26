@@ -44,7 +44,7 @@
 <td><form:input path = "showTime" required="true"/></td>
 </tr>
 <tr>
-<td><form:label path = "showDate">Show Date</form:label></td>
+<td><form:label path = "showDate">Show Date(DD-MM-YYYY)</form:label></td>
 <td><form:input path = "showDate" required="true"/></td>
 </tr>  
 <td colspan = "2">

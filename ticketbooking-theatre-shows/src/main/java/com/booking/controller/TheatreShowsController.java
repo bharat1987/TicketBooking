@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.booking.dto.MovieShowsDTO;
-import com.booking.repository.entities.MovieShows;
+import com.booking.exception.InvalidDataException;
 import com.booking.service.MasterDataService;
 import com.booking.service.MovieShowsService;
 
@@ -24,11 +24,17 @@ public class TheatreShowsController {
 	
 	@PostMapping("/theatreShows/createShow")
 	public MovieShowsDTO createShow(@RequestBody MovieShowsDTO dto) {
+		if(dto.getTheatreScreen().getId()==null||dto.getMovie().getId()==null) {
+			throw new InvalidDataException("Invalid theatre or movie value provided.");
+		}
 		return showService.createShow(dto);
 	}
 	
 	@PutMapping("/theatreShows/updateShow")
 	public void updateeShow(@RequestBody MovieShowsDTO dto) {
+		if(dto.getTheatreScreen().getId()==null||dto.getMovie().getId()==null) {
+			throw new InvalidDataException("Invalid theatre or movie value provided.");
+		}
 		showService.updateShow(dto);
 	}
 	

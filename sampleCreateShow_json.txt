@@ -9,3 +9,15 @@
             "id": "6289ea803eee8d1032fb7542"
         }
     }
+
+{
+  "showTime": "06:00",
+  "showDate": "27-May-2022",
+  "showStatus": "OPEN",
+  "movie": {
+    "$oid": "628fb46fd787de35cb622a8f"
+  },
+  "theatreScreen": {
+    "$oid": "628fb470d787de35cb622a99"
+  }
+}

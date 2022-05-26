@@ -25,10 +25,8 @@ public class MovieShows {
 	
 	private String showStatus;
 	
-	@DocumentReference
     private Movies movie;	
 
-	@DocumentReference
 	private TheatreScreens theatreScreen;
 	
 }

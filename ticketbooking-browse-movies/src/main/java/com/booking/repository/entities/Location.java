@@ -12,17 +12,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document("movies")
-public class Movies {
+@Document("location")
+public class Location {
 	
 	@Id
 	private String id;
 	
-	private String movieName;
+	private String city;
 	
-	private String language;
+	private String place;
 	
-	//@DocumentReference
-	//private List<MovieShows> showList;
+	private String country;
 
 }

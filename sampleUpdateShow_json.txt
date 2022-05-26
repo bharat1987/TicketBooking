@@ -1,25 +1,28 @@
 
+
     {
-        "id": "6289ea803eee8d1032fb7546",
+        "id": "628fb470d787de35cb622a9e",
         "showTime": "06:00",
         "showDate": "27-May-2022",
-        "showStatus": “OPEN”,
+        "showStatus": null,
         "movie": {
-            "id": "6289ea803eee8d1032fb753a",
+            "id": "628fb46fd787de35cb622a8f",
             "movieName": "F3",
             "language": "Telugu"
         },
         "theatreScreen": {
-            "id": "6289ea803eee8d1032fb7541",
+            "id": "628fb470d787de35cb622a99",
             "theatre": {
-                "id": "6289ea803eee8d1032fb753e",
+                "id": "628fb470d787de35cb622a96",
                 "name": "PVR",
-                "city": "Hyderabad",
                 "status": "Active",
-                "place": "Punjagutta",
-                "country": "India"
+                "location": {
+                    "id": "628fb470d787de35cb622a93",
+                    "city": "Hyderabad",
+                    "place": "Punjagutta",
+                    "country": "India"
+                }
             },
             "screenName": "Atom1"
         }
     }
-
